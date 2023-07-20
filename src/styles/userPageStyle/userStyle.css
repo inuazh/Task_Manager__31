@@ -1,0 +1,154 @@
+header {
+    background: rgba(200, 103, 163, 1);
+
+}
+
+.user__main {
+    min-height: 90vh;
+    background: rgb(87, 87, 87);
+}
+
+.user__footer {
+    background: rgb(0, 0, 0);
+
+}
+
+.user__header__navbar__brand {
+    font-family: Roboto;
+    color: white;
+}
+
+.user__header__dropdown__btn {
+    margin-right: 5vh;
+    color: white;
+}
+
+
+
+.user__header__navbar__dropdown__menu {
+    padding: 0;
+    width: 1vh;
+}
+
+.user__header__navbar__account__icon {
+    width: 100%;
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+#user__btn__profile {
+    margin-left: 5vh;
+    padding: 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.kanban {
+    margin: 0 auto;
+    padding-top: 5vh;
+    width: 70%;
+}
+
+.container__tasks {
+    margin: 0 auto;
+}
+
+.kanban__head {
+    background-color: rgba(0, 103, 163, 1);
+}
+
+.container__tasks {
+    margin: 5vh;
+}
+
+.kanban__block {
+    background-color: rgba(235, 236, 240, 1);
+    border-radius: 2vh;
+    margin: 3vh;
+}
+
+
+
+#Ready__task--cards,
+#InProgress__task--cards,
+#Finished__task--cards {
+    max-height: 80vh;
+    overflow: auto;
+    padding: 5vh;
+}
+
+#Ready__add--button,
+#InProgress__add--button,
+#Finished__add--button {
+    border: none;
+    margin: 3vh;
+    text-align: start;
+
+}
+
+.task__add--button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+
+.card {
+    width: 100%;
+    height: 2em;
+}
+
+.dragItem {
+    cursor: move;
+}
+
+.dropZone {
+    min-height: 2em;
+}
+
+
+#test--element {
+    border-style: dotted;
+    background-color: black;
+    width: 2em;
+    height: 2em;
+}
+
+
+.divSubmits {
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+
+.btn__out {
+    border: none;
+    background-color: white
+}
+
+
+.draggable-item:hover {
+    cursor: grab;
+}
+
+.draggable-item:active {
+    cursor: grabbing;
+}
+
+.ghost {
+    opacity: 0.4;
+    background-color: rgb(220, 228, 233);
+    border-width: 0.1em;
+    border-style: dotted;
+    padding-top: 1vh;
+    padding-left: 1vh;
+    height: 10vh;
+
+}

@@ -1,5 +1,10 @@
-import { BaseModel } from "./BaseModel";
-import { getFromStorage, addToStorage } from "../utils";
+import {
+  BaseModel
+} from "./BaseModel";
+import {
+  getFromStorage,
+  addToStorage
+} from "../utils";
 
 export class User extends BaseModel {
   constructor(login, password) {
@@ -7,16 +12,25 @@ export class User extends BaseModel {
     this.login = login;
     this.password = password;
     this.storageKey = "users";
+    this.dropDownFlag = false;
+
   }
+
   get hasAccess() {
+    let access = false;
     let users = getFromStorage(this.storageKey);
     if (users.length == 0) return false;
-    for (let user of users) {
-      if (user.login == this.login && user.password == this.password)
-        return true;
-    }
-    return false;
+
+    users.forEach(element => {
+      if (element.login == this.login && element.password == this.password) {
+        return access = true;
+      }
+    });
+
+    return access;
   }
+
+
   static save(user) {
     try {
       addToStorage(user, user.storageKey);

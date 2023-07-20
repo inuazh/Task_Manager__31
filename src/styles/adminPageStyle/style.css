@@ -1,0 +1,94 @@
+
+
+/* Шапка */
+header {
+    background: #4285F4; /* Голубой оттенок */
+  }
+  
+  .user__header__navbar__brand {
+    font-family: 'Montserrat', sans-serif; /* Используем шрифт Montserrat */
+    color: white;
+  }
+  
+  .user__header__dropdown__btn {
+    margin-right: 2rem; /* Изменим отступы */
+    color: white;
+  }
+  
+  .user__header__navbar__account__icon {
+    width: 2rem; /* Изменим размер иконки */
+    height: 2rem;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  /* Основное содержимое */
+  .user__main {
+    min-height: 90vh;
+    background: #F9A825; /* Желтый оттенок */
+  }
+  
+  .kanban {
+    margin: 0 auto;
+    padding-top: 3rem; /* Изменим отступы */
+    width: 70%;
+  }
+  
+  .kanban__head {
+    background-color: #4285F4; /* Голубой оттенок */
+    padding: 1rem;
+    color: white;
+  }
+  
+  .kanban__block {
+    background-color: #F5F5F5; /* Светло-серый оттенок */
+    border-radius: 1rem; /* Увеличим радиус скругления */
+    margin: 2rem;
+    padding: 1rem;
+  }
+  
+  #Ready__task--cards,
+  #InProgress__task--cards,
+  #Finished__task--cards {
+    max-height: 60vh;
+    overflow: auto;
+    padding: 1rem; /* Изменим отступы */
+  }
+  
+  #Ready__add--button,
+  #InProgress__add--button,
+  #Finished__add--button {
+    border: none;
+    margin: 1rem;
+    text-align: start;
+    background-color: #4285F4; /* Голубой оттенок */
+    color: white;
+    padding: 0.5rem 1rem; /* Изменим отступы */
+    border-radius: 0.5rem; /* Увеличим радиус скругления */
+    cursor: pointer;
+  }
+  
+  #Finished__add--button {
+    display: block; /* Покажем кнопку "Add card" для завершенных задач */
+  }
+  
+  /* Футер */
+  .user__footer {
+    background: #4285F4; /* Голубой оттенок */
+    padding: 1rem;
+  }
+  
+  .admin__footer__allInProgressTasks__text,
+  .admin__footer__allFinishedTasks__text {
+    color: white;
+  }
+  
+  /* Дополнительные стили */
+  .draggable-item:hover {
+    cursor: grab;
+  }
+  
+  .draggable-item:active {
+    cursor: grabbing;
+  }
+  

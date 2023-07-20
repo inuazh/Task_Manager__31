@@ -1,27 +1,44 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import {
+  Tooltip,
+  Toast,
+  Popover
+} from 'bootstrap'
+import Sortable from 'sortablejs';
 import "./styles/style.css";
 import taskFieldTemplate from "./templates/taskField.html";
 import noAccessTemplate from "./templates/noAccess.html";
-import { User } from "./models/User";
-import { generateTestUser } from "./utils";
-import { State } from "./state";
-import { authUser } from "./services/auth";
+import admin from "./templates/admin.html"; 
+
+
+import {
+  changeState,
+  getFromStorage,
+  createAdminUser,
+  pageLoader
+} from "./utils"; 
+
+import {
+  State
+} from "./state";
+
+import {
+  Footer
+} from "./models/footer";
 
 export const appState = new State();
+export var users = getFromStorage('users'); 
+export const footer = new Footer()
 
-const loginForm = document.querySelector("#app-login-form");
 
-generateTestUser(User);
+export function startApp() {
 
-loginForm.addEventListener("submit", function (e) {
-  e.preventDefault();
-  const formData = new FormData(loginForm);
-  const login = formData.get("login");
-  const password = formData.get("password");
+  createAdminUser()
+  changeState();
+  pageLoader()
+  footer.startFooter()
 
-  let fieldHTMLContent = authUser(login, password)
-    ? taskFieldTemplate
-    : noAccessTemplate;
+}
 
-  document.querySelector("#content").innerHTML = fieldHTMLContent;
-});
+
+startApp();
